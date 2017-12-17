@@ -1,35 +1,78 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+  <title>Task manager</title>
+  
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+  <meta charset="utf-8">
 </head>
 
-<body>
 
-<form action="index.php?page=tasks&action=store&id=" method="post" id="form1">
+<body text-align:center>
+  <center>
+<a href="#">Home</a>
 
-Owner Email:<input type="text" name="owneremail" value=""><br>
-Owner ID:<input type="text" name="ownerid" value=""><br>
-Created Date:<input type="text" name="createddate" value=""><br>
-Due Date:<input type="text" name="duedate" value=""><br>
-Message:<input type="text" name="message" value=""><br>
-Is Done:<input type="text" name="isdone" value=""><br>
+<br>
+<br>
+        <form action="index.php?page=accounts&action=show" method="POST">
+        <button type="submit">Your Profile</button>
+        </form>
+        <br>
+        <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit">Logout</button>
+        </form>
+        <br>
+
+    <h3> Enter Task Details </h3>
+    
+<form action="index.php?page=tasks&action=store&id=" method="post" id="form1" class = "form-inline">
+
+<div class = "form-group">
+<label>Owner Email-</label>
+<input type="text" name="owneremail" value="<?php session_start(); echo $_SESSION["email"]; ?>">
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Owner ID-</label>
+<input type="text"  name="ownerid" value="<?php echo $_SESSION["userID"]; ?>">
+</div>
+<br><br>
+
+<?php date_default_timezone_set("America/New_York"); ?>
+<div class = "form-group">
+<label>Created Date-</label>
+<input type="text"  name="createddate" value="<?php echo date("Y-m-d").' '.date("h:i:sa"); ?>"readonly>
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Due Date-</label>
+<input type="text"  name="duedate" value="">
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Message-</label>
+<input type="text"  name="message" value="">
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Is Done-</label>
+<input type="text" name="isdone" value="">
+</div>
+<br><br>
 
 <button type="submit" form="form1" value="create">Create</button>
 </form>
 
+</div>
 
+<center>
+<footer class="container-fluid text-center">
+  <p>WSD Final Project</p>
+</footer>
 
 <script src="js/scripts.js"></script>
 </body>

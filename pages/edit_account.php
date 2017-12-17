@@ -87,53 +87,40 @@
     <div class="col-sm-2 sidenav">
     </div>
     <div class="col-sm-8 text-center"> 
-    <h3> Confirm Task Details </h3>
+    <h3> Edit Details </h3>
 
-<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1" class = "form-inline">
+<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post" class = "form-inline">
 
-<div class = "form-group">
-<label>ID-</label>
-<input type="text" name="id" class="form-control" value="<?php echo $data->id;?>"readonly>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Owner Email-</label>
-<input type="text" name="owneremail" class="form-control" value="<?php echo $data->owneremail;?>"readonly><br>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Owner ID-</label>
-<input type="text" name="ownerid" class="form-control" value="<?php echo $data->ownerid;?>"readonly><br>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Created Date-</label>
-<input type="text" name="createddate" class="form-control" value="<?php echo $data->createddate;?>"readonly><br>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Due Date-</label>
-<input type="text" name="duedate" class="form-control" value="<?php echo $data->duedate;?>"readonly><br>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Message-</label>
-<input type="text" name="message" class="form-control" value="<?php echo $data->message;?>"readonly><br>
-</div>
-<br><br>
-
-<div class = "form-group">
-<label>Is Done-</label>
-<input type="text" name="isdone" class="form-control" value="<?php echo $data->isdone;?>"readonly><br>
-</div>
-<br><br>
-
-    <button type="submit" form="form1" class="btn btn-primary" value="delete">Delete</button>
+    <div class = "form-group" align="center">
+    <label>First name-</label>
+    <input type="text" class="form-control" name="fname" value="<?php echo $data->fname; ?>">
+    </div><br><br>
+    
+    <div class = "form-group" align="center">
+    <label>Last name-</label>
+    <input type="text" class="form-control" name="lname" value="<?php echo $data->lname; ?>">
+    </div><br><br>
+    
+    <div class = "form-group" align="center">
+    <label>Email-</label>
+    <input type="text" class="form-control" name="email" value="<?php echo $data->email; ?>">
+    </div><br><br>
+    
+    <div class = "form-group" align="center">
+    <label>Phone-</label>
+    <input type="text" class="form-control" name="phone" value="<?php echo $data->phone; ?>">
+    </div><br><br>
+    
+    <div class = "form-group" align="center">
+    <label>Birthday-</label>
+    <input type="text" class="form-control" name="birthday" value="<?php echo $data->birthday; ?>">
+    </div><br><br>
+    
+    <div class = "form-group" align="center">
+    <label>Gender-</label>
+    <input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>">
+    </div><br><br>
+    <input type="submit" class="btn btn-primary" value="SAVE">
 </form>
 
 </div>
@@ -146,7 +133,6 @@
 <footer class="container-fluid text-center">
   <p>Web System Development</p>
 </footer>
-
 
 
 <script src="js/scripts.js"></script>
