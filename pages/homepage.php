@@ -3,27 +3,34 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>The HTML5 Herald</title>
+    <title>WSD Project : Login</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 </head>
 
 <body>
-<center>
+
+<h1>Todo List Application</h1>
+
+<br><br>
+
 <form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container">
-        <h5><b>Username</b></h5>
-        <input type="text" placeholder="Enter Username" name="uname" required><br>
+    
+        <b>Username</b>
+        <input type="text" placeholder="Enter Username" name="uname" required>
 
-        <h5><b>Password</b></h5>
+        <b>Password</b>
         <input type="password" placeholder="Enter Password" name="psw" required><br><br>
 
         <button type="submit">Login</button>
-    </div>
+        <button><a href="index.php?page=accounts&action=register">Register</a></button>
+
 </form>
 
-<h3><a href="index.php?page=accounts&action=register">Register</a></h3>
-<center>
+
+
+
+
 </body>
 </html>

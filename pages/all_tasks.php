@@ -7,26 +7,25 @@
 </head>
 
 
-<body text-align:center>
-        <li class="active"><a href="#">Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+<h2><a href="index.php?page=accounts&action=back1">Home</a></h2>
+<br><br>
+            
       
-      <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" >Your Profile</button>
-        </form></div></li>
+        </form>
         
-        <li><div>
+        <br>
         <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" >Logout</button>
-        </form></div></li>
-      </ul>
+        </form>
+      <br><br>
 <body>
+
 
 <?php
 $text='';
-$text.='<h2>Pending Tasks</h2><br>';
+$text.='<h4>View Tasks</h4><br>';
 $text.='<a href="index.php?page=tasks&action=create"><span class="glyphicon glyphicon-plus">Create New Task</span></a>';
 if($data==FALSE){
   $text.='<br>No records found';
@@ -39,9 +38,5 @@ echo $text;
 }
 ?>
 
-</div>
-<footer class="container-fluid text-center">
-  <p>WSD Final Project</p>
-</footer>
 </body>
 </html>
